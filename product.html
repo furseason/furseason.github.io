@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class 5</title>
+  <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Poetsen+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_product.css" />
+</head>
+<body>
+  <header>
+    <nav class="nav-left">
+      <a href="brand.html">OUR BRAND</a>
+      <a href="product.html">OUR PRODUCT</a>
+    </nav>
+
+    <div class="logo">
+        <a href="index.html"><img src="img/logo.png" alt="Furseason Logo"/></a>
+    </div>
+
+    <nav class="nav-right">
+      <a href="corporate.html">CORPORATE</a>
+      <a href="contact.html">CONTACT US</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>FURSEASON DOG BASKET</h1>
+    <p>Say goodbye to messy car rides with our comfy and easy-to-clean dog travel basket. Designed with a sleek suede cover that attracts dog hair, a protective plastic bottom, and removable washable layers - it's the perfect car companion for your pup.</p>
+    
+    <div class="buy-container">
+      <span class="price-tag">€50</span>
+      <a href="javascript:void(0);" onclick="toggleDetails(this)" class="buy-now-btn">BUY NOW</a>
+    </div>
+  
+    <div class="size-options">
+      <button>Small (S)</button>
+      <button>Medium (M)</button>
+      <button>Large (L)</button>
+    </div>
+  </section>  
+
+  <section class="blocks"></section>
+
+  <footer>
+    <p>&copy; 2025 furseason. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleDetails(button) {
+      const sizeOptions = document.querySelector('.size-options');
+  
+      if (sizeOptions.style.maxHeight && sizeOptions.style.maxHeight !== "0px") {
+        sizeOptions.style.maxHeight = "0px";
+        button.innerText = "BUY NOW";
+      } else {
+        sizeOptions.style.maxHeight = sizeOptions.scrollHeight + "px";
+        button.innerText = "CHOOSE SIZE";
+      }
+    }
+  </script>  
+
+</body>
+</html>
